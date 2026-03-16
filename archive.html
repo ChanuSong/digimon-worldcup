@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디지몬 도감 | 디지바이스 매칭 아카이브</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&family=Orbitron:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scan-grid"></div>
+    <div class="scan-orb scan-orb-a"></div>
+    <div class="scan-orb scan-orb-b"></div>
+
+    <main class="app-shell">
+      <header class="topbar panel">
+        <a class="brand" href="./index.html">DIGIVICE ARCHIVE</a>
+        <nav class="topnav">
+          <a href="./quiz.html">심리검사</a>
+          <a href="./result.html">결과/교감</a>
+          <a class="active" href="./archive.html">도감</a>
+        </nav>
+      </header>
+
+      <section class="panel page-hero compact-hero">
+        <p class="eyebrow">Digimon Archive</p>
+        <h1>추천 대상 메인 디지몬 도감</h1>
+        <p>한국어 명칭 기준으로 정리한 주요 파트너 디지몬과 진화 정보를 한곳에 모았습니다.</p>
+      </section>
+
+      <section class="panel archive-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Partner Catalog</p>
+            <h2>메인 디지몬 16종</h2>
+          </div>
+        </div>
+        <div id="archive-list" class="archive-list"></div>
+      </section>
+    </main>
+
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/archive.js"></script>
+  </body>
+</html>

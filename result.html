@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과와 교감 | 디지바이스 매칭 아카이브</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&family=Orbitron:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scan-grid"></div>
+    <div class="scan-orb scan-orb-a"></div>
+    <div class="scan-orb scan-orb-b"></div>
+
+    <main class="app-shell">
+      <header class="topbar panel">
+        <a class="brand" href="./index.html">DIGIVICE ARCHIVE</a>
+        <nav class="topnav">
+          <a href="./quiz.html">심리검사</a>
+          <a class="active" href="./result.html">결과/교감</a>
+          <a href="./archive.html">도감</a>
+        </nav>
+      </header>
+
+      <section id="empty-state" class="panel empty-state hidden">
+        <p class="eyebrow">No Scan Data</p>
+        <h1>검사 결과가 아직 없습니다</h1>
+        <p>먼저 심리검사를 완료해야 결과와 교감 페이지를 열 수 있습니다.</p>
+        <a class="primary-button link-button" href="./quiz.html">심리검사 하러 가기</a>
+      </section>
+
+      <section id="result-page" class="hidden">
+        <article class="panel result-hero">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Chosen Child Result</p>
+              <h2 id="result-title">파트너 디지몬 분석 결과</h2>
+              <p id="result-summary"></p>
+            </div>
+            <div class="hero-actions">
+              <a class="ghost-button link-button" href="./quiz.html">다시 검사</a>
+              <a class="ghost-button link-button" href="./archive.html">도감 보기</a>
+            </div>
+          </div>
+          <div id="top-result" class="top-result"></div>
+        </article>
+
+        <div class="result-grid">
+          <article class="panel trait-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Trait Signature</p>
+                <h2>선택받은 아이 성향</h2>
+              </div>
+            </div>
+            <div id="trait-bars" class="trait-bars"></div>
+          </article>
+
+          <article class="panel ranking-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Top 3 Partner</p>
+                <h2>추천 랭킹</h2>
+              </div>
+            </div>
+            <div id="ranking-list" class="ranking-list"></div>
+          </article>
+        </div>
+
+        <article class="panel bond-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Bond Protocol</p>
+              <h2>교감과 진화</h2>
+              <p>행동을 골라 유대 수치를 채우고, 100%가 되면 진화 프로토콜을 실행하세요.</p>
+            </div>
+          </div>
+          <div class="bond-layout">
+            <div id="bond-card" class="bond-card"></div>
+            <div class="bond-console">
+              <div id="interaction-actions" class="interaction-actions"></div>
+              <div id="milestone-list" class="milestone-list"></div>
+              <div id="interaction-log" class="interaction-log"></div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div id="evolution-overlay" class="evolution-overlay hidden">
+      <div class="evolution-burst">
+        <p class="eyebrow">Digivolution Burst</p>
+        <h2 id="evolution-title">진화 개시</h2>
+        <p id="evolution-text"></p>
+        <button id="close-evolution" class="primary-button">계속 진행</button>
+      </div>
+    </div>
+
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/result.js"></script>
+  </body>
+</html>

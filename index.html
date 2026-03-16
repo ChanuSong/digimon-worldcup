@@ -3,137 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chosen Child Archive</title>
+    <title>디지바이스 매칭 아카이브</title>
     <meta
       name="description"
-      content="심리검사를 통해 당신에게 가장 어울리는 파트너 디지몬을 찾아주는 모바일 중심 웹 경험"
+      content="선택받은 아이 심리검사를 통해 당신의 파트너 디지몬을 찾는 멀티페이지 웹 경험"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Pretendard:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&family=Orbitron:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="background-layer background-layer-a"></div>
-    <div class="background-layer background-layer-b"></div>
+    <div class="scan-grid"></div>
+    <div class="scan-orb scan-orb-a"></div>
+    <div class="scan-orb scan-orb-b"></div>
+
     <main class="app-shell">
-      <section class="hero-card panel">
-        <p class="eyebrow">Chosen Child Archive</p>
+      <header class="topbar panel">
+        <a class="brand" href="./index.html">DIGIVICE ARCHIVE</a>
+        <nav class="topnav">
+          <a href="./quiz.html">심리검사</a>
+          <a href="./result.html">결과/교감</a>
+          <a href="./archive.html">도감</a>
+        </nav>
+      </header>
+
+      <section class="hero panel">
         <div class="hero-copy">
-          <h1>심리검사로 찾는 나만의 파트너 디지몬</h1>
-          <p>
-            성향을 분석해 1, 2, 3위 파트너 디지몬을 추천합니다. 결과에는 추천 이유, 성격 요약,
-            교감 인터랙션까지 포함됩니다.
+          <p class="eyebrow">Chosen Child Entrance</p>
+          <h1>파트너 디지몬을 찾는 심리검사</h1>
+          <p class="hero-text">
+            디지몬 세계관 분위기에 맞춰 랜딩, 검사, 결과, 교감/진화, 도감을 나눈 구조로 다시
+            구성했습니다. 모바일에서 읽기 편하도록 문장 폭과 카드 밀도를 다시 잡았습니다.
           </p>
-        </div>
-        <div class="hero-meta">
-          <span>모바일 퍼스트</span>
-          <span>심리검사 10문항</span>
-          <span>랭킹 결과 + 교감</span>
-        </div>
-        <button id="start-button" class="primary-button">선택받은 아이 판별 시작</button>
-      </section>
-
-      <section class="mission-grid">
-        <article class="panel mini-panel">
-          <p class="mini-label">Mission 01</p>
-          <h2>성향 분석</h2>
-          <p>용기, 공감, 탐험심, 침착함 등 8개 성향 축으로 점수를 계산합니다.</p>
-        </article>
-        <article class="panel mini-panel">
-          <p class="mini-label">Mission 02</p>
-          <h2>파트너 매칭</h2>
-          <p>디지몬별 성향 벡터와 당신의 응답을 비교해 가장 닮은 파트너를 고릅니다.</p>
-        </article>
-        <article class="panel mini-panel">
-          <p class="mini-label">Mission 03</p>
-          <h2>교감 시뮬레이션</h2>
-          <p>추천된 디지몬과 상호작용하며 유대 수치를 높이고 반응을 확인할 수 있습니다.</p>
-        </article>
-      </section>
-
-      <section id="quiz-panel" class="panel hidden">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Psych Scan</p>
-            <h2>당신의 디지털 문장을 해독합니다</h2>
+          <div class="hero-tags">
+            <span>검사 10문항</span>
+            <span>메인 디지몬 16종</span>
+            <span>유대 수치 + 진화 루프</span>
           </div>
-          <div class="progress-block">
-            <span id="progress-text">1 / 10</span>
-            <div class="progress-bar">
-              <div id="progress-fill" class="progress-fill"></div>
-            </div>
+          <div class="hero-actions">
+            <a class="primary-button link-button" href="./quiz.html">디지바이스 스캔 시작</a>
+            <a class="ghost-button link-button" href="./archive.html">디지몬 도감 보기</a>
           </div>
         </div>
-        <div id="question-card" class="question-card"></div>
-        <div id="answer-list" class="answer-list"></div>
+
+        <div class="hero-device">
+          <div class="device-screen">
+            <p class="device-label">Partner Signal</p>
+            <div class="device-radar"></div>
+            <div class="device-status">
+              <div>
+                <strong>선택받은 아이 적합도</strong>
+                <span>성향, 유대 형성력, 전투 공명도를 해독합니다.</span>
+              </div>
+              <b>READY</b>
+            </div>
+          </div>
+          <div class="crest-row">
+            <span class="crest-badge">용기</span>
+            <span class="crest-badge">우정</span>
+            <span class="crest-badge">희망</span>
+            <span class="crest-badge">빛</span>
+          </div>
+        </div>
       </section>
 
-      <section id="result-panel" class="hidden">
-        <article class="panel result-hero">
-          <div class="result-head">
-            <div>
-              <p class="eyebrow">Partner Confirmed</p>
-              <h2 id="result-title">당신의 파트너 디지몬</h2>
-              <p id="result-summary" class="result-summary"></p>
-            </div>
-            <button id="restart-button" class="ghost-button">다시 검사하기</button>
-          </div>
-          <div id="top-result" class="top-result"></div>
+      <section class="intro-grid">
+        <article class="panel intro-card">
+          <p class="mini-label">Page 01</p>
+          <h2>심리검사</h2>
+          <p>한 화면엔 한 역할만 주도록 분리했습니다. 검사 페이지에서는 질문과 선택에만 집중합니다.</p>
         </article>
+        <article class="panel intro-card">
+          <p class="mini-label">Page 02</p>
+          <h2>결과와 교감</h2>
+          <p>추천 결과 발표 후 바로 유대 수치를 올리고, 충분히 채우면 진화 프로토콜을 실행합니다.</p>
+        </article>
+        <article class="panel intro-card">
+          <p class="mini-label">Page 03</p>
+          <h2>디지몬 도감</h2>
+          <p>추천 대상 디지몬을 한국어 이름 기준으로 정리하고, 개별 진화 정보도 함께 확인합니다.</p>
+        </article>
+      </section>
 
-        <article class="panel trait-panel">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Trait Signature</p>
-              <h2>선택받은 아이로서의 성향</h2>
-            </div>
-          </div>
-          <div id="trait-bars" class="trait-bars"></div>
-        </article>
-
-        <article class="panel ranking-panel">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Top 3 Match</p>
-              <h2>추천 파트너 랭킹</h2>
-            </div>
-          </div>
-          <div id="ranking-list" class="ranking-list"></div>
-        </article>
-
-        <article class="panel sync-panel">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Bond Link</p>
-              <h2>파트너와 교감하기</h2>
-              <p>행동을 선택해 유대 수치를 높이고 파트너의 반응을 확인하세요.</p>
-            </div>
-          </div>
-          <div class="sync-layout">
-            <div id="bond-card" class="bond-card"></div>
-            <div class="interaction-card">
-              <div id="interaction-actions" class="interaction-actions"></div>
-              <div id="interaction-log" class="interaction-log"></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="panel archive-panel">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Digimon Archive</p>
-              <h2>추천 대상 데이터셋</h2>
-            </div>
-          </div>
-          <div id="archive-list" class="archive-list"></div>
-        </article>
+      <section class="panel cta-card">
+        <p class="eyebrow">Route Guide</p>
+        <h2>권장 흐름</h2>
+        <div class="route-steps">
+          <div class="route-step"><strong>1</strong><span>랜딩 확인</span></div>
+          <div class="route-step"><strong>2</strong><span>심리검사 진행</span></div>
+          <div class="route-step"><strong>3</strong><span>추천 결과 확인</span></div>
+          <div class="route-step"><strong>4</strong><span>교감과 진화</span></div>
+        </div>
       </section>
     </main>
-
-    <script src="./app.js"></script>
   </body>
 </html>

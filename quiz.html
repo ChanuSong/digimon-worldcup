@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>심리검사 | 디지바이스 매칭 아카이브</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&family=Orbitron:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scan-grid"></div>
+    <div class="scan-orb scan-orb-a"></div>
+    <div class="scan-orb scan-orb-b"></div>
+
+    <main class="app-shell">
+      <header class="topbar panel">
+        <a class="brand" href="./index.html">DIGIVICE ARCHIVE</a>
+        <nav class="topnav">
+          <a class="active" href="./quiz.html">심리검사</a>
+          <a href="./result.html">결과/교감</a>
+          <a href="./archive.html">도감</a>
+        </nav>
+      </header>
+
+      <section class="panel page-hero compact-hero">
+        <p class="eyebrow">Psychological Decode</p>
+        <h1>당신의 문장을 읽는 중</h1>
+        <p>질문에 답하면 결과 페이지에서 추천 1~3위와 교감 시스템이 열립니다.</p>
+      </section>
+
+      <section class="panel quiz-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Signal Reading</p>
+            <h2>선택 패턴 분석</h2>
+          </div>
+          <div class="progress-box">
+            <span id="progress-text">1 / 10</span>
+            <div class="progress-bar">
+              <div id="progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+        <div id="question-card" class="question-card"></div>
+        <div id="answer-list" class="answer-list"></div>
+      </section>
+    </main>
+
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/quiz.js"></script>
+  </body>
+</html>
