@@ -130,15 +130,19 @@ window.App = (() => {
 
   function imageUrl(apiName, alt) {
     const map = loadImageMap();
-    return (
-      map[normalizeName(apiName)] ||
-      `https://digimon.shadowsmith.com/img/${normalizeName(apiName)}.jpg` ||
-      createPlaceholder(alt)
-    );
+    const cached = map[normalizeName(apiName)];
+    if (cached) return cached;
+    return `https://digimon-api.vercel.app/api/digimon/name/${encodeURIComponent(apiName)}`;
   }
 
   function imageMarkup(apiName, alt, className = "") {
-    return `<img src="${imageUrl(apiName, alt)}" alt="${alt}" class="${className}" loading="lazy" />`;
+    const map = loadImageMap();
+    const cached = map[normalizeName(apiName)];
+    const placeholder = createPlaceholder(alt);
+    if (cached) {
+      return `<img src="${cached}" alt="${alt}" class="${className}" loading="lazy" onerror="this.onerror=null;this.src='${placeholder}'" />`;
+    }
+    return `<img src="${placeholder}" alt="${alt}" class="${className}" loading="lazy" data-api-name="${apiName}" />`;
   }
 
   return {
